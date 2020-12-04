@@ -1,0 +1,15 @@
+.feed{
+  position: relative;
+  margin: auto;
+}
+
+.feed__status form {
+  display: flex;
+  align-items: auto;
+}
+
+.feed__control {
+  text-align: auto;
+}
+
+

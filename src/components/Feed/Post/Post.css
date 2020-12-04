@@ -1,0 +1,40 @@
+.post {
+  margin: 10%;
+  border: 1px solid #3b0062;
+  border-radius: 5px;
+  padding: 10;
+  position: relative;
+}
+
+.post__meta {
+  font-size: 1rem;
+  color: #707070;
+  margin: 10%;
+  padding: 10;
+  position: relative;
+}
+
+.post__title {
+  font-size: 1.5rem;
+  margin: 10%;
+  color: #3b0062;
+  padding: 10;
+  position: relative;
+}
+.post_content{
+  page-break-after: auto;
+  text-align: center;
+  padding: 10;
+  margin: 10%;
+  position: relative;
+}
+
+.post__actions {
+  text-align: right;
+}
+
+.post_read{
+  text-align: left;
+  margin-right: 20%;
+  color: gray;
+}
