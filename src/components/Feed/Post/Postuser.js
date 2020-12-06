@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React,{useState} from 'react';
 
-import Button from "../../Button/Button";
-import "./Post.css";
+import Button from '../../Button/Button';
+import './PostUser.css';
 
-function post(props) {
+function postUser(props) {
   const list = props.list;
   const [DraggedItem, setDraggedItem]=useState(null);
   const [List, setList] = useState(list);
@@ -34,7 +34,7 @@ function post(props) {
   }
 
   return (
-    <div className="main">
+    <div>
       <ul>
         {List.map((item, idx) => {
           return (
@@ -50,12 +50,6 @@ function post(props) {
                 <Button mode="flat" link={item._id}>
                   View
                 </Button>
-                <Button mode="flat" className="Button_update" onClick={(id)=>{props.onStartEdit(item._id)}}>
-                  Edit
-                </Button>
-                <Button mode="flat" className="Button" design="danger" onClick={(id)=>{props.onDelete(item._id)}}>
-                  Delete
-                </Button>
               </div>
             </div>
             </li>
@@ -66,4 +60,6 @@ function post(props) {
   );
 }
 
-export default post;
+
+
+export default postUser;

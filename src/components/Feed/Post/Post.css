@@ -2,8 +2,8 @@
   margin: 10%;
   border: 1px solid #3b0062;
   border-radius: 5px;
-  padding: 10;
   position: relative;
+  
 }
 
 .post__meta {
@@ -30,7 +30,7 @@
 }
 
 .post__actions {
-  text-align: right;
+  margin-right: 10%;
 }
 
 .post_read{
@@ -38,3 +38,10 @@
   margin-right: 20%;
   color: gray;
 }
+
+.list{
+  list-style: none;
+
+}
+
+
