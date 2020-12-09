@@ -3,7 +3,7 @@ import React,{useState} from 'react';
 import Button from '../../Button/Button';
 import './PostUser.css';
 
-function postUser(props) {
+function PostUser(props) {
   const list = props.list;
   const [DraggedItem, setDraggedItem]=useState(null);
   const [List, setList] = useState(list);
@@ -62,4 +62,4 @@ function postUser(props) {
 
 
 
-export default postUser;
+export default PostUser;
