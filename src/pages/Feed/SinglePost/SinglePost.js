@@ -77,7 +77,7 @@ class SinglePost extends Component {
       <section className="single-post">
         <h1>{this.state.title}</h1>
         <p>{this.state.content}</p>
-        <a href={this.state.url}>Visit the Page</a>
+        <a href={'https://'+this.state.url}>Visit the Page</a>
         <br></br>
         <br></br>
       </section>
