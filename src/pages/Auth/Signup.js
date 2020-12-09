@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Input from '../../components/Form/Input/Input';
 import Button from '../../components/Button/Button';
-import Dropdown from '../../components/DropDown/Dropdown';
+import Dropdown from '../../components/Dropdown/Dropdown';
 import { required, length, email } from '../../util/validators';
 import Auth from './Auth';
 
