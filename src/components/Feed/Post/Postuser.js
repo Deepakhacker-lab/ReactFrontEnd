@@ -1,13 +1,18 @@
-import React,{useState} from 'react';
-
+import React,{useState , useContext} from 'react';
 import Button from '../../Button/Button';
 import './PostUser.css';
+import {CartContext} from '../../../context/Carthook';
+
+
 
 function PostUser(props) {
+
   const list = props.list;
   const [DraggedItem, setDraggedItem]=useState(null);
   const [List, setList] = useState(list);
   console.log(list);
+  
+  const  {addToCart}  = useContext(CartContext);
 
   function onDragStartHandler(e, id) {
     console.log("Inside drag start" + e);
@@ -33,6 +38,7 @@ function PostUser(props) {
       setList(items);
   }
 
+
   return (
     <div>
       <ul>
@@ -50,8 +56,12 @@ function PostUser(props) {
                 <Button mode="flat" link={item._id}>
                   View
                 </Button>
+                
               </div>
+              <Button design="raised" onClick={()=>{addToCart(item)}}>Add to Cart</Button>
+              
             </div>
+
             </li>
           );
         })}

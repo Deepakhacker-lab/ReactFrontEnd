@@ -19,7 +19,7 @@ class Feed extends Component {
     postPage: 1,
     DraggedItem: null,
     postsLoading: true,
-    editLoading: false,
+    editLoading: false
   };
 
   componentDidMount() {
@@ -63,6 +63,7 @@ class Feed extends Component {
         return res.json();
       })
       .then((resData) => {
+
         this.setState({
           posts: resData.posts.map((post) => {
             return {

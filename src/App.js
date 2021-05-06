@@ -11,7 +11,10 @@ import FeedPage from './pages/Feed/Feed';
 import SinglePostPage from './pages/Feed/SinglePost/SinglePost';
 import LoginPage from './pages/Auth/Login';
 import SignupPage from './pages/Auth/Signup';
+import CartPage from './pages/Cart/Cart';
 import './App.css';
+
+
 
 class App extends Component {
   state = {
@@ -24,8 +27,8 @@ class App extends Component {
     authLoading: false,
     error: null
   };
-
-  componentDidMount() {
+  
+   componentDidMount() {
     const token = localStorage.getItem('token');
     const expiryDate = localStorage.getItem('expiryDate');
     if (!token || !expiryDate) {
@@ -203,6 +206,13 @@ class App extends Component {
             )}
           />
           <Route
+            path="/cart"
+            exact
+            render={props => (
+              <CartPage userId={this.state.userId} token={this.state.token} />
+            )}
+          />
+          <Route
             path="/:postId"
             render={props => (
               <SinglePostPage
@@ -229,6 +239,7 @@ class App extends Component {
                 onOpenMobileNav={this.mobileNavHandler.bind(this, true)}
                 onLogout={this.logoutHandler}
                 isAuth={this.state.isAuth}
+
               />
             </Toolbar>
           }

@@ -18,7 +18,8 @@
 
 .navigation-item a:hover,
 .navigation-item a:active,
-.navigation-item a.active {
+.navigation-item a.active,
+.navigation-nav a.active{
   color: #fab83f;
 }
 
@@ -36,6 +37,44 @@
 }
 
 .navigation-item button:hover,
-.navigation-item button:active {
+.navigation-item button:active,
+.navigation-nav :hover {
   color: #fab83f;
+}
+
+.navigation-item-cart {
+  font: inherit;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+
+}
+
+.cart-svg{
+  height: 1.5rem;
+  width: 2rem;
+  z-index: 1;
+  position: obsolute;
+  left: 0;
+  top: 0;
+}
+
+.cart-span{
+  position: absolute;
+  background: #c20e0e;
+  border-radius: 25%;
+  z-index: 2;
+  left: 20px;
+  top: -15px;
+}
+
+.navigation-nav{
+  font: inherit;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
 }
